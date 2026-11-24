@@ -8,11 +8,11 @@ const authMiddleware = require("../middleware/authMiddleware");
 router.post("/register", userController.register);
 router.post("/login", userController.login);
 
-router.get("/komik", komikController.getAllKomik);
-router.get("/komik/:id", komikController.getKomikById);
+router.get("/Komik", komikController.getAllKomik);
+router.get("/Komik/:id", komikController.getKomikById);
 
-router.post("/komik", authMiddleware, komikController.createKomik);
-router.put("/komik/:id", authMiddleware, komikController.updateKomik);
-router.delete("/komik/:id", authMiddleware, komikController.deleteKomik);
+router.post("/Komik", authMiddleware, komikController.createKomik);
+router.put("/Komik/:id", authMiddleware, komikController.updateKomik);
+router.delete("/Komik/:id", authMiddleware, komikController.deleteKomik);
 
 module.exports = router;
